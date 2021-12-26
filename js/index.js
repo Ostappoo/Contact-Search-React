@@ -1,6 +1,6 @@
 'use strict';
 
-var CONTACTS = [{
+let CONTACTS = [{
     id: 1,
     name: 'Dan',
     phoneNumber: '+88005555213',
@@ -23,7 +23,7 @@ var CONTACTS = [{
 
 }];
 
-var Contact = React.createClass({
+let Contact = React.createClass({
     displayName: 'Contact',
 
     render: function render() {
@@ -53,7 +53,7 @@ var Contact = React.createClass({
     }
 });
 
-var ContactsList = React.createClass({
+let ContactsList = React.createClass({
     displayName: 'ContactsList',
 
     getInitialState: function getInitialState() {
@@ -63,9 +63,9 @@ var ContactsList = React.createClass({
     },
 
     handleSearch: function handleSearch(event) {
-        var searchQuery = event.target.value.toLowerCase();
-        var displayedContacts = CONTACTS.filter(function (el) {
-            var searchValue = el.name.toLowerCase();
+        let searchQuery = event.target.value.toLowerCase();
+        let displayedContacts = CONTACTS.filter(function (el) {
+            let searchValue = el.name.toLowerCase();
             return searchValue.indexOf(searchQuery) !== -1;
         });
 
